@@ -7,8 +7,8 @@ export default function App() {
     return (
         <div>
             <Header/>
-            <MovieAPI/>
+            <MovieAPI />
             <Footer/>
         </div>
     )
-}
+} 
