@@ -4,7 +4,7 @@ import Header from './components/Header'
 import MovieAPI from './components/MovieAPI'
 
 export default function App() {
-    return (
+  return (
         <div>
             <Header/>
             <MovieAPI />
