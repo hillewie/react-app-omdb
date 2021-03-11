@@ -1,55 +1,19 @@
 import React from 'react'
-import Movie from './Movie'
-
 
 const MovieList = (props) => {
 
     return (
-        
-        <div>
-            <Movie/>
-
-
-        {/* {props.movies.map((movie) => (
-
-        <Movie
-            // key={movie.id}
-            // movie={movie}
-            />
-))} */}
-
-);
-        </div>
-    )
-
+        <>
+            {props.movies.map((movie) => (
+                <div>
+                    <img src={movie.Poster} alt='movie'></img>
+                    <h4>{movie.Title}</h4>
+                    <p>Year:{movie.Year}</p>
+                    <p>Type:{movie.Type}</p> 
+                </div>
+            ))}
+        </>
+    );      
 }
 
-export default MovieList 
-
-
-
-// const MovieList = (props) => {
-
-//         return(
-//             {props.movie.map((movie, index) => {
-
-//             <Movie
-//                 key={movie.id}
-//                 movie={movie}
-//                 id={index}
-//             />
-//             );
-//         }
-//     });
-
-//     console.log('MovieList->render()');
-
-//     return (
-//         <div>
-//             <img src={movie.Poster} class="movie"/>
-//             <h2>{movie.Title}</h2>
-//         </div>
-//     )  
-// }
-// export default MovieList
-
+export default MovieList;

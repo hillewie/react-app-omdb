@@ -3,12 +3,15 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import MovieAPI from './components/MovieAPI'
 
-export default function App() {
+function App() {
+
   return (
         <div>
-            <Header/>
+            <Header heading="Movies" />
             <MovieAPI />
             <Footer/>
         </div>
     )
 } 
+
+export default App; 
