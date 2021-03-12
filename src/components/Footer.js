@@ -3,9 +3,7 @@ import React, { Component } from 'react'
 export class Footer extends Component {
     render() {
         return (
-            <div>
-                <h1>Footer</h1>
-            </div>
+            <footer className="footer">@copyright by Zebbi Nanjii Hillie</footer>
         )
     }
 }
