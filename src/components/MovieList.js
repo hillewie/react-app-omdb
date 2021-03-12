@@ -1,31 +1,33 @@
 import React from 'react'
-import Movie from './Movie';
+
 
 const MovieList = (props) => {
 
+
     
 
+  
+
     return (
-        <>
+        
+        <div>
             {props.movies.map((movie, index) => (
-                <div 
-                
-                className="grid-container">
-                    <div 
-                    
-                    className="movie-container" 
-                    
-    >
-                        <img className="poster" src={movie.Poster} alt='movie'></img>
-                        <p key={index}></p>
-                        <h4>{movie.Title}</h4>
-                        <p>Year:{movie.Year}</p>
-                        <p>Type:{movie.Type}</p> 
-                    </div>
+                <div key={index} className="grid-container">
+                    <ul className="movie-container">
+                        <img 
+                        className="poster" 
+                        src={movie.Poster} 
+                        alt='movie'></img>
+                        <li>{index.toString()}</li>
+                        <li>{movie.Title}</li>
+                        <li>Year: {movie.Year}</li>
+                        <li>Type: {movie.Type}</li> 
+                    </ul>
                 </div>
             ))}
-        </>
+        </div>
     );      
 }
 
 export default MovieList;
+
