@@ -12,7 +12,7 @@ import MovieList from './MovieList';
         const response = await fetch(url);
         const data = await response.json();
          
-
+        console.log(data.Search);
         if (data.Search){
             setMovies(data.Search); 
         };
@@ -22,7 +22,6 @@ import MovieList from './MovieList';
         FetchMovies(searchValue);
     }, [searchValue]);
  
-
 
     return (
             <div>
@@ -37,6 +36,7 @@ import MovieList from './MovieList';
                 <div>
                     <MovieList 
                     movies={movies} 
+                    
                     />
                 </div>
             </div>
