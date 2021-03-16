@@ -3,12 +3,9 @@ import React from 'react'
 const Movie = (props) => {
 
 return (
-    <div>
-
-    </div>
-)
-
-
+    
+   <p>hejh</p>
+    )
 }
 
 export default Movie;

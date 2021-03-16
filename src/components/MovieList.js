@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+
 const MovieList = (props) => {
 
 
@@ -13,16 +14,19 @@ const MovieList = (props) => {
         <div>
             {props.movies.map((movie, index) => (
                 <div key={index} className="grid-container">
-                    <ul className="movie-container">
+                    <div 
+                    className="movie-container"
+                    >
                         <img 
                         className="poster" 
                         src={movie.Poster} 
                         alt='movie'></img>
-                        <li>{index.toString()}</li>
-                        <li>{movie.Title}</li>
-                        <li>Year: {movie.Year}</li>
-                        <li>Type: {movie.Type}</li> 
-                    </ul>
+                        <p>{index.toString()}</p>
+                        <p>{movie.Title}</p>
+                        <p>Year: {movie.Year}</p>
+                        <p>Type: {movie.Type}</p> 
+                    </div>
+                    
                 </div>
             ))}
         </div>
