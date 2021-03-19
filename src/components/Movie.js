@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const Movie = (props) => {
+export class Movie extends Component {
 
-return (
-    
-   <p>hejh</p>
-    )
+    render() {
+
+        return (
+            <div className="movie-container">
+                <img 
+                className="poster" 
+                src={this.props.movie.Poster} 
+                alt='movie'>
+                </img>
+                    <p>{this.props.movie.Title}</p>
+                    <p>Year: {this.props.movie.Year}</p>
+                    <p>Type: {this.props.movie.Type}</p> 
+            </div>
+        )
+    }
 }
 
-export default Movie;
+export default Movie

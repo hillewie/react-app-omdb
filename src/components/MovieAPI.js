@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Component } from 'react'
 import Form from './Form';
 import MovieList from './MovieList';
 
@@ -21,15 +21,15 @@ import MovieList from './MovieList';
     useEffect(() => {
         FetchMovies(searchValue);
     }, [searchValue]);
- 
+    
 
     return (
             <div>
                 <div>
-                    
                     <Form 
                     searchValue={searchValue} 
                     setSearchValue={setSearchValue}
+                    movies={movies}
                     />
                 </div>
 
@@ -40,9 +40,7 @@ import MovieList from './MovieList';
                     />
                 </div>
             </div>
-    )
+        )
 }
 
 export default MovieAPI 
-
-
