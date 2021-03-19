@@ -1,34 +1,24 @@
- import React from 'react';
+import React from 'react'
+import Movie from './Movie'
 
 const Form = (props) => (
-            <div className="form">
+            <div className="form">            
+                <input 
+                    className="form-input" 
+                    value={props.value}
+                    onChange={(event) => props.setSearchValue(event.target.value)}
+                    type="text"
+                    placeholder="Type to search..."
+                />
 
+            {props.movies.map((movie, index) => (
+               <div key={index} className="grid-container"> 
+                    <Movie movie={movie}/>
+               </div>
+            ))}
             
-        <input 
-            className="form-input" 
-            value={props.value}
-            onChange={(event) => props.setSearchValue(event.target.value)}
-            type="text"
-            placeholder="Type to search..."
-        />
-        
-        
-        <label className="dropdown">
-            <select name="Select" id="drop-down">
-            <option value="All">All</option>
-            <option value="Movie">Movies</option>
-            <option value="Series">Series</option>
-            <option value="Episode">Episode</option>
-            </select>
-        </label>
-        
-        
-        <div className="underline"></div>
+            <div className="underline"></div>
         </div>
     )
-
-
-
-
  export default Form
  

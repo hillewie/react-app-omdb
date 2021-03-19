@@ -68,13 +68,14 @@ h1 {
   height: 300px;
   width: auto;
   float: left;
-  margin-bottom: 30px;
+  
 }
 
 .movie-container:hover {
   cursor: pointer;
   transform: scale(1.1);
   font-size: 14px;
+  margin-bottom: 40px; 
 }
 
 .grid-container .movie-container h4 {
@@ -91,8 +92,8 @@ h1 {
 }
 
 .footer {
-  margin-top: 1rem;
-  padding: 1rem;
+  margin-top: 40px;
+  padding-top: 1rem;
   background-color: rgb(42, 41, 41);
   position: fixed;
   bottom: 0;
